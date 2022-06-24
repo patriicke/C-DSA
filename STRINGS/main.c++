@@ -9,10 +9,12 @@ int main(){
      //cout << fname;
       // In case the user wants to put both names;
        string names;
+       int number = 5;
        cout << "Enter your full names: ";
        getline(cin, names);
        cout << names;
        cout << endl;
-       cout << "I am comming from biggest city";
+       cout << "I am comming from biggest city"; 
+       cout << endl;
     return 1;
 }
