@@ -3,9 +3,16 @@
 using namespace std;
 
 int main(){
-    long long int number;
-    cout << "Enter a number: ";
-    cin >> number;
-    cout << "You entered a number " << number;
+    string firstname;
+    string lastname;
+    int age;
+    
+    cout << "Please enter a firstname: ";
+    getline(cin, firstname);
+    cout << "Please enter a lastname: ";
+    getline(cin, lastname);
+    cout << "Please enter age: ";
+    cin >> age;
+    cout << "First name: " << firstname << " Last name: "<<lastname << " Age: "<< age;
     return 1;
 }
