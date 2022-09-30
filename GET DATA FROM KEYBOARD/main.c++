@@ -13,5 +13,6 @@ int main(){
     cout << "Please enter age: ";
     cin >> age;
     cout << "First name: " << firstname << " Last name: "<<lastname << " Age: "<< age;
+    
     return 1;
 }
