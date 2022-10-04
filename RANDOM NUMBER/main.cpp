@@ -2,13 +2,10 @@
 #include<cstdlib>
 using namespace std;
 
-namespace RandomNumbers {
-    float randomNumber () {
-        return rand();
-    }
-}
 
 int main(){
-    cout << RandomNumbers::randomNumber << endl;
-    cout << rand() << endl;
+    cout << rand()%10 << endl;
+    cout << rand()%10 << endl;
+    cout << rand()%10 << endl;
+    cout << rand()%10 << endl;
 }
