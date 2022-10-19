@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.css": "css",
+    "css": "css",
+    "iostream": "cpp",
+    "ostream": "cpp"
+  }
+}
