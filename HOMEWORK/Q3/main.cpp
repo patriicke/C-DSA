@@ -1,5 +1,6 @@
 #include<iostream>
 #include<math.h>
+
 using namespace std;
 
 bool isNumberInteger(double N);
@@ -26,3 +27,4 @@ bool isNumberInteger(double DOUBLE_NUM){
     }
 }
 
+// Print all integer pairs(a,b) greater than 1 and  less than 100 that can satisfy hypotenuse rule. Hypotenuse should be also integer. Display the number of pairs found. Treat (3,4) and (4,3) as one pair.
