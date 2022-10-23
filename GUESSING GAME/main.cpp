@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cstdlib>
 #include<ctime>
+#include<string.h>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ int main (){
     string districts_category[] = {"Gasabo", "Musanze", "Rubavu", "Kigali", "Burera", "Bugesera", "Gicumbi", "Nyabihu", "Nyarugenge", "Nyaruguru"};
     string films_category[] = {"Blackout", "The Sinner", "The Midnight Club", "The Mole", "Cocomelon", "The Watcher", "Megamind", "he Blacklist", "The Gray Man", "Minions"};
     string books_category[] ={"Anna Karenina", "To Kill a Mockingbird","The Great Gatsby", "One Hundred Years of Solitude", "A Passage to India","Invisible Man", "Don Quixote", "Beloved", "Mrs. Dalloway", "Things Fall Apart"};
-    string current_category[10];
+    string *current_category;
     int words_categories_length = sizeof(words_categories)/sizeof(typeof(words_categories[0])) ,i = 0, choosed_category, random_index;
     cout << "Categories of words to guess: " << endl;
     while (i < words_categories_length){
@@ -34,15 +35,60 @@ int main (){
     switch (choosed_category)
     {
     case 1:
-    copy (animals_category,2, current_category);
+    current_category = animals_category;
         break;
-    
-    default:
+     case 2:
+    current_category = teams_category;
+        break;
+     case 3:
+    current_category = districts_category;
+        break;
+     case 4:
+    current_category = films_category;
+        break;
+     case 5:
+    current_category = books_category;
         break;
     }
     random_index = randomNumber(0,9);
+    int trials;
+    switch (current_category[random_index].length()){
+    case 4:
+    case 5:
+    trials = 2;
+    break;
+    case 6:
+    case 7:
+        trials = 3;
+    break;
+    case 8:
+    case 9:
+    case 10:
+        trials = 4;
+    break;
+    case 11:
+    case 12:
+    case 13:
+    case 14:
+    case 15:
+        trials = 6;
+    break;
+    }
+    string trialsLetterArray[trials+1];
+    for (int i = 0; i < trials; i++){
+        incorrectLetter:
+        cout << "Enter any letter: ";
+        cin >> trialsLetterArray[i];
+        if(trialsLetterArray[i].length() > 1 || trialsLetterArray[i].length() < 1) {
+            goto incorrectLetter;
+        }
+        for (int j = 0; j < current_category[random_index].length(); j++){
+            string currentText = animals_category[random_index];
+            // cout << (currentText.compare(trialsLetterArray[i]) ? currentText.at(j) : "_";
+        }
+        cout << endl;
+    }
+    // cout << current_category[random_index] << " "  << (current_category[random_index]).length() << endl; 
     
-
-
     return 0;
 }
