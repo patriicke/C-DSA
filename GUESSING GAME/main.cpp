@@ -100,17 +100,21 @@ int main (){
         }
     string exit;
     string complete_name;
-    cout << "Enter the complete " << words_singular_categories[choosed_category - 1] << ": ";
+    cout << "Enter the complete " << words_singular_categories[choosed_category - 1] << " name: ";
     cin >> complete_name;
     if (complete_name == word){
         cout << "Congratulations! You won." << endl;
     }else{
         cout << "Sorry! You Loss." << endl;
     }
-    cout << "Enter y to continue or exit to quit: ";
+    exit:
+    cout << "Enter y to continue or exit to quit the game: ";
     cin >> exit;
     if(exit == "exit"){
         break;
+    }
+    if(exit != "y"){
+        goto exit;
     }
     }
     cout << "Thank you playing this game." << endl;
